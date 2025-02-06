@@ -4,13 +4,55 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Raleway", serif;
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.raleway {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.text-md {
+  font-size: 10px;
+}
+.text-xs {
+  font-size: smaller;
+}
+.text-2xl {
+  font-size: 40px;
+}
+.text-yellow {
+  color: rgba(231, 231, 11, 0.924);
+}
+.font-bold {
+  font-weight: bold;
+}
+.my-5 {
+  margin: 8px 0px;
+}
+
+.my-30 {
+  margin: 30px 0px;
+}
+.my-100 {
+  margin: 100px 0px;
+}
+.text-teal {
+  color: teal;
 }
 header {
   width: 100%;
   display: flex;
   padding: 5px 100px;
-  height: 70px;
+  height: 80px;
   margin: auto;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.795);
+
   justify-content: space-between;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   /* navbar */
@@ -43,11 +85,24 @@ header {
           & {
             a {
               color: black;
+              padding: 0px 5px;
             }
+            a:link {
+              color: blue;
+            } /* Unvisited link */
+            a:visited {
+              color: red;
+            } /* Visited link */
             a:hover {
+              color: pink;
               text-decoration: underline;
+            } /* When hovered */
+            a:focus {
               color: teal;
-            }
+            } /* When focused */
+            a:active {
+              color: orange;
+            } /* When clicked */
           }
         }
       }
@@ -58,8 +113,10 @@ header {
     .btn {
       display: flex;
       align-items: center;
+      justify-content: end;
       height: 100%;
       padding: 0 30px;
+      width: 250px;
 
       & {
         button {
@@ -85,10 +142,9 @@ header {
 /* main */
 
 main {
-  padding: 0px 100px;
-
-  height: 100%;
-  height: 100vh;
+  width: 1200px;
+  margin: auto;
+  padding: 0px 30px;
 }
 
 .mt-10 {
@@ -97,7 +153,7 @@ main {
 .container-1 {
   height: 500px;
   border-radius: 9px;
-  background-color: #eeeeee46;
+  background-color: #eeeeee3a;
   display: flex;
 }
 .container-1 .vertical-nav {
@@ -113,13 +169,20 @@ main {
       gap: 10px;
       writing-mode: sideways-lr;
       & {
+        li {
+          padding: 10px 0px;
+        }
         a {
           color: black;
-          font-weight: bold;
+
+          font-size: 12px;
         }
         a:hover {
-          text-decoration: underline;
           color: teal;
+        }
+        .underline-text {
+          border-right: 1px solid teal;
+          padding-right: 5px; /* Adjust spacing */
         }
       }
     }
@@ -127,5 +190,460 @@ main {
 }
 .container-1 .hero-content {
   width: 95%;
-  background-color: antiquewhite;
+
+  display: flex;
+}
+.hero-left {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+}
+/* sec1-card1 lefthand */
+.hero-left .side-1 {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-left .side-1 .first-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.hero-left .side-1 .first-card .avater {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 0px 0px 10px;
+}
+.hero-left .side-1 .first-card .avater img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.hero-left .side-1 .first-card .des {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.hero-left .side-1 .first-card .rate {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+/* sec1-card2- lefthand */
+.hero-left .side-1 .secound-card {
+  height: 50%;
+  width: 80%;
+
+  border-radius: 10px;
+}
+
+.hero-left .side-1 .secound-card {
+  height: 60%;
+  width: 80%;
+  background-image: url(https://static01.nyt.com/images/2022/08/14/multimedia/14japan-economy-1/14japan-economy-1-superJumbo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.hero-left .side-1 .secound-card .rating-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+}
+.hero-left .side-1 .secound-card .rating-card .des {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+.hero-left .side-1 .secound-card .rating-card .rate {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.hero-left .side-2 {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-left .side-2 .first-card {
+  height: 60%;
+  width: 80%;
+  background-image: url(https://lp-cms-production.imgix.net/2019-06/d150c8c399f2d41ecf8864b69ddc7a35-mt-fuji.jpg?fit=crop&ar=1%3A1&w=1200&auto=format&q=75);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.hero-left .side-2 .first-card .rating-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+}
+.hero-left .side-2 .first-card .rating-card .des {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+.hero-left .side-2 .first-card .rating-card .rate {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+.hero-left .side-2 .secound-card {
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 10px;
+  display: flex;
+}
+.hero-left .side-2 .secound-card .vertical-image {
+  width: 45%;
+  height: 150px;
+  padding: 10px;
+}
+.hero-left .side-2 .secound-card .vertical-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.hero-left .side-2 .secound-card .horizontal-image {
+  width: 55%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-left .side-2 .secound-card .horizontal-image .stack-image {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.hero-left .side-2 .secound-card .horizontal-image .stack-image .stack1,
+.stack2,
+.stack3 {
+  position: absolute;
+  height: 100%;
+  width: 44%;
+  border: 1px solid white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.stack1 {
+  top: 0;
+  left: 0;
+  background-image: url(https://www.shutterstock.com/image-photo/seoul-korea-december-31-2016-600nw-574774783.jpg);
+}
+.stack2 {
+  top: 0;
+  left: 30px;
+  background-image: url(https://inmykorea.com/wp-content/uploads/2023/08/Various-Korean-Street-Food-In-Seoul.jpg);
+}
+.stack3 {
+  top: 0;
+  left: 60px;
+  background-image: url(https://ilovenats.wordpress.com/wp-content/uploads/2024/09/dscf2461.jpg?w=1568);
+}
+.hero-right {
+  width: 50%;
+
+  padding-left: 100px;
+  padding-top: 20px;
+  height: 100%;
+}
+
+.hero-right .Slogan {
+  height: auto;
+  margin: 20px 0px;
+  font-weight: 900;
+}
+.capitalize-text::first-letter {
+  text-transform: uppercase;
+  color: rgb(10, 227, 227);
+  font-size: 70px;
+}
+
+.hero-right .des {
+  height: 20%;
+}
+.hero-right .btn {
+  margin-top: 20px;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.line-height {
+  line-height: 2;
+}
+.btn-hover button {
+  border: none;
+  background-color: teal;
+  color: white;
+  border-radius: 20px;
+  padding: 13px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.circle-hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: teal;
+  background-color: white;
+}
+.circle-hover:hover {
+  border: 1px solid teal;
+}
+
+/* section2 */
+.container-2 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  padding: 20px;
+}
+.container-2 .des {
+  width: 50%;
+  height: 100%;
+}
+.container-2 .des .btn {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.container-2 .des .btn button {
+  transition: 1200ms;
+  background-color: white;
+  border: 1px solid teal;
+  color: black;
+}
+.container-2 .des .btn button:hover {
+  transition: 1200ms;
+  background-color: teal;
+  color: white;
+}
+.container-2 .des .btn button:focus {
+  transition: 1200ms;
+  background-color: orange;
+  color: white;
+  border: 2px solid #eee;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container-2 .image-show {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+.container-2 .image-show .card-box1 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+}
+.container-2 .image-show .card-box2 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.container-2 .image-show .card-box3 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container-2 .image-show .card-body {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  transition: 1000ms;
+}
+.container-2 .image-show .card-body:hover {
+  transform: scale(1.1);
+  transition: 1000ms;
+}
+.container-2 .image-show .card-body img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* section3 */
+.container-3 {
+  width: 100%;
+  padding: 0px 100px;
+}
+
+.container-3 .des {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.container-3 .box {
+  width: 100%;
+  display: flex;
+  padding: 25px 0px;
+}
+.container-3 .box .left-box {
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+}
+.container-3 .box .left-box .card {
+  display: flex;
+  flex-direction: column;
+}
+.container-3 .box .left-box .card .number,
+.title,
+.des-card {
+  padding: 10px;
+}
+.container-3 .box .left-box .card .number span {
+  background-color: rgb(10, 215, 215);
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+.container-3 .box .left-box .card .des-card {
+  display: flex;
+  justify-content: start;
+}
+.container-3 .box .right-box {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.container-3 .box .right-box .card-image {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: url(https://www.advantour.com/img/japan/tokyo/takeshita-street.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-feedback3,
+.card-feedback2,
+.card-feedback1 {
+  background-color: #eeeeeed1;
+  border-radius: 10px;
+  padding: 5px 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.card-feedback3 {
+  position: absolute;
+  bottom: 70px;
+  left: -40px;
+}
+.card-feedback2 {
+  position: absolute;
+  top: 170px;
+  right: -30px;
+}
+
+.card-feedback1 {
+  position: absolute;
+  top: 20px;
+  left: -40px;
+}
+.card-feedback1 .avater img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card-feedback2 .avater img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-feedback3 .avater img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #eeeeee2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & {
+    .footer-body {
+      width: auto;
+    }
+  }
+}
+.to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
