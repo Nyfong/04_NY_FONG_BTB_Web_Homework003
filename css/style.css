@@ -153,7 +153,6 @@ main {
 .container-1 {
   height: 500px;
   border-radius: 9px;
-  background-color: #eeeeee3a;
   display: flex;
 }
 .container-1 .vertical-nav {
@@ -197,6 +196,8 @@ main {
   width: 50%;
   padding: 20px;
   display: flex;
+  background-color: #eeeeee3a;
+  border-radius: 10px 0px 0px 10px;
 }
 /* sec1-card1 lefthand */
 .hero-left .side-1 {
@@ -205,6 +206,7 @@ main {
   padding: 10px;
   display: flex;
   flex-direction: column;
+
   gap: 10px;
 }
 .hero-left .side-1 .first-card {
@@ -377,7 +379,8 @@ main {
 }
 .hero-right {
   width: 50%;
-
+  background-color: #eeeeee3a;
+  border-radius: 0px 10px 10px 0px;
   padding-left: 100px;
   padding-top: 20px;
   height: 100%;
@@ -400,7 +403,6 @@ main {
 .hero-right .btn {
   margin-top: 20px;
   height: 20%;
-
   display: flex;
   align-items: center;
   gap: 20px;
@@ -445,6 +447,8 @@ main {
   margin-top: 10px;
   display: flex;
   align-items: center;
+  height: 70px;
+  padding-left: 5px;
 }
 .container-2 .des .btn button {
   transition: 1200ms;
